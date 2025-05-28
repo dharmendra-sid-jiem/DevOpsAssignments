@@ -1,0 +1,29 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "A",
+            "age": 21,
+            "city": "Kolkata"
+        },
+        {
+            "id": 2,
+            "name": "B",
+            "age": 25,
+            "city": "Mumbai"
+        },
+        {
+            "id": 3,
+            "name": "C",
+            "age": 18,
+            "city": "Agra"
+        },
+        {
+            "id": 4,
+            "name": "D",
+            "age": 27,
+            "city": "Deharadun"
+        }
+    ]
+}
