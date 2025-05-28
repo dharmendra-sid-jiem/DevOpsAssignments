@@ -43,6 +43,11 @@ def view():
     }
     return jsonify(data)
 
+@app.route('/submittodoitem', methods = ['POST'])
+def submittodoitem():
+    form_data = request.get_json()
+    collection.insert_one(form_data)
+    return "Added record successfully!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=6000,debug=True)

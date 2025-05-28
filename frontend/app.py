@@ -46,5 +46,21 @@ def api():
     
     return data.json()
 
+@app.route('/todo')
+def todo():
+     return render_template('todo.html')
+
+@app.route('/submittodoitem', methods = ['POST'])
+def submittodoitem():
+    try:
+        form_data =dict(request.form)
+        requests.post(BACKEND_URL+'/submittodoitem', json=form_data)
+        return redirect(url_for('success'))
+    except Exception as e:
+        flash(f"Error submitting data: {e}")
+        return redirect(url_for('home'))
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000,debug=True)
